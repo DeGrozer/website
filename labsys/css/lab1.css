@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@300&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #e7e7e7;
+}
+.desktop .overlap-group {
+    width: 330px;
+    height: 740px;
+    top: 0;
+    left: 0;
+    background-color: #001a4e;
+    position: fixed;
+}
+
+.desktop .welcome {
+  position: absolute;
+  width: 264px;
+  top: 96px;
+  left: 23px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 31px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.lab1 {
+  text-align: center;
+  width: calc(100% - 330px);
+  margin-left: 330px;
+  box-sizing: border-box;
+}
+
+.lab1 h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #161616;
+  font-size: 51px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+
+
+.computer-container {
+//
+}
+
+.dropdown-container {
+//
+}
+.menu ul .dropdown {
+  display: none;
+  position: absolute;
+  width: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 49px;
+  left: 42px;
+}
+
+
+
+.menu-container-1:hover .dropdown {
+  display: block;
+}
+.menu ul .dropdown li {
+  /* Adjust the width of the dropdown items */
+  width: 100%; /* Update or remove width as needed */
+  margin-bottom: 5px; /* Optional: Adjust spacing between items */
+}
+
+/* Adjust the hover background color for dropdown items */
+.menu ul .dropdown li:hover {
+  background-color: #5175bc;
+}
+
+/*.desktop .text-wrapper {
+  top: 490px;
+  left: 91px;
+  position: absolute;
+  width: 164px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .overlap {
+  position: absolute;
+  width: 221px;
+  height: 35px;
+  top: 392px;
+  left: 60px;
+  border-radius: 9px;
+}
+
+.desktop .text-wrapper-2 {
+  top: 4px;
+  left: 31px;
+  position: absolute;
+  width: 164px;
+  font-family: 'Roboto', sans-serif;  font-weight: 600;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}*/
+
+.desktop .rectangle {
+  position: absolute;
+  width: 222px;
+  height: 35px;
+  top: 0;
+  left: 0;
+  background-color: #fffefe33;
+  border-radius: 9px;
+}
+
+/*.desktop .text-wrapper-3 {
+  top: 445px;
+  left: 91px;
+  position: absolute;
+  width: 164px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.desktop .text-wrapper-4 {
+  position: absolute;
+  width: 351px;
+  top: 65px;
+  left: 19px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 31px;
+  letter-spacing: 0;
+  line-height: normal;
+}*/
+.menu {
+  width: 330px;
+  text-align: left;
+  margin-top: 200px;
+}
+.menu .menu-container{
+height: 60px;
+}
+
+.menu ul {
+list-style-type: none;
+}
+.menu img {
+  position: relative;
+  width: 27px;
+  height: 27px;
+  object-fit: cover;
+}
+
+.menu ul a li {
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  left: 0;
+  background-color: #001a4e;
+  border-radius: 10px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 70px;
+}.
+.menu ul .dropdown li{
+display: block;
+}
+.dropdown{
+margin-top: 45px;
+margin-left: 45px;
+font-family: "Roboto", sans-serif;
+font-weight: 600;
+font-size: 20px;
+width: 200px;
+}
+.dropdown a{
+color:#ffffff;
+}
+.dropdown .drop-container{
+height: 50px;
+}
+.menu ul .dropdown{
+display: none;
+position: absolute;
+}
+.menu-container-1:hover .dropdown{
+display: list-item;
+}
+.menu ul a li:hover {
+  background-color: #5175bc;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+}
+
+.menu .text-wrapper-5 {
+position: relative;
+width: 164px;
+font-family: 'Roboto', sans-serif;  
+font-weight: 600;
+color: #ffffff;
+font-size: 20px;
+letter-spacing: 0;
+line-height: normal;
+}
+
+.desktop .frame {
+    display: flex;
+    width: 135px;
+    height: 68px;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+  
+  .desktop .LOG-OUT-wrapper {
+    display: flex;
+    width: 135px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 12px;
+    bottom: 0px;
+  }
+  
+  .desktop .LOG-OUT {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: #001a4e;
+    font-size: 25px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.desktop .overlap-2 {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  top: 315px;
+  left: 27px;
+  border-radius: 10px;
+}
+
+.desktop .frame-2 {
+  display: flex;
+  width: 255px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5175bc;
+  border-radius: 10px;
+}
+
+.desktop .img {
+  position: relative;
+  width: 27px;
+  height: 27px;
+  object-fit: cover;
+}
+
+.desktop .text-wrapper-5 {
+  position: relative;
+  width: 164px;
+  font-family: 'Roboto', sans-serif;  font-weight: 600;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .overlap-3 {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  top: 186px;
+  left: 27px;
+  border-radius: 10px;
+}
+
+.desktop .frame-3 {
+  width: 255px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  background-color: #001a4e;
+  border-radius: 10px;
+  display: flex;
+  position: absolute;
+}
+
+.desktop .frame-4 {
+  width: 255px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  top: 244px;
+  left: 27px;
+  background-color: #001a4e;
+  border-radius: 10px;
+  display: flex;
+  position: absolute;
+}
+
+.desktop .main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 63px;
+  margin-left: 50px; 
+}
+
+.desktop .container {
+  height: 65px;
+}
+.desktop .frame-5 {
+  width: 332px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  left: 352px;
+  background-color: #4a5a78;
+  display: flex;
+  position: absolute;
+}
+
+.desktop .vector {
+  position: relative;
+  width: 21.1px;
+  height: 21.1px;
+  margin-left: -0.05px;
+}
+
+.desktop .text-wrapper-6 {
+  position: relative;
+  width: 164px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .text-wrapper-7 {
+  position: absolute;
+  /* width: 158px; */
+  top: 91px;
+  left: 832px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #001a4e;
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 1.08px;
+  line-height: normal;
+}
+
+.dropdown-box {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color:none;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.right-container {
+  position: absolute;
+  right: 726px;
+  top: 66px;
+}
+
+/*button log in */
+.desktop .frame-edit {
+  width: 162px;
+  height: 94px;
+  align-items: flex-start;
+  top: 169px;
+  left: 834px;
+  display: flex;
+  position: absolute;
+}
+
+.desktop .edit-button-wrapper {
+    display: flex;
+    width: 135px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    background-color: #c8bebe;
+    border-radius: 12px;
+}
+.desktop .edit{
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Alumni Sans', sans-serif;
+  font-weight: 600;
+  color: #001a4e;
+  font-size: 40px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/*save*/
+.desktop .frame-save {
+  width: 162px;
+  height: 94px;
+  align-items: flex-start;
+  top: 245px;
+  left: 834px;
+  display: flex;
+  position: absolute;
+}
+
+.desktop .save-button-wrapper {
+    display: flex;
+    width: 135px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 12px;
+    bottom: 0px;
+}
+.desktop .save{
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Alumni Sans', sans-serif;
+  font-weight: 600;
+  color: #001a4e;
+  font-size: 40px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+.LOG-IN {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  text-decoration: none;
+}
+.container-button{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 46px;
+  right: 549px;
+  align-items: center;
+}
+.container-button #save{
+    position: relative;
+    width: fit-content;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: #001a4e;
+    font-size: 25px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.container-button #edit{
+  position: relative;
+  width: fit-content;
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #001a4e;
+  font-size: 25px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+.container-button .title{
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.message{
+  position: absolute;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  color: #5175bc;
+  left: 20px;
+  bottom: 20px;
+}
