@@ -7,6 +7,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/lab1.css" />
+    <style>
+   
+    </style>
+    
+    <script>
+        let labCount = 0;
+
+        function addLab() {
+            labCount++;
+
+            const labName = prompt(`Enter the name for Lab ${labCount}:`);
+            if (labName) {
+                const menu = document.querySelector('.menu');
+                const labsMenu = menu.querySelector('.menu-container-1 ul.dropdown');
+
+                const newLab = document.createElement('div');
+                newLab.classList.add('drop-container');
+                newLab.innerHTML = `<a href="#" onclick="showLab(${labCount})"><li>${labName}</li></a>`;
+
+                labsMenu.appendChild(newLab);
+
+                const labSection = document.createElement('div');
+                labSection.classList.add('lab1'); // Always use lab1 class
+                labSection.id = `lab${labCount}`; // Unique ID for each lab
+                labSection.style.display = 'none'; 
+                labSection.innerHTML = `
+                    <h1>${labName}</h1>
+                    <form method="post">
+                        <button type="button" onclick="addPC(${labCount})">Add PC</button>
+                        <button type="button" onclick="saveLayout(${labCount})">Save Layout</button> 
+                        <div id="computerContainer${labCount}" class="computer-container">
+                            <!-- PCs will be dynamically added here -->
+                        </div>
+                    </form>
+                `;
+
+                const desktop = document.querySelector('.desktop');
+                desktop.appendChild(labSection);
+                showLab(labCount); 
+            }
+        }
+
+        function showLab(labNumber) {
+            const labs = document.querySelectorAll('.desktop > div[class^="lab"]');
+            labs.forEach(lab => lab.style.display = 'none');
+
+            const selectedLab = document.querySelector(`.desktop > #lab${labNumber}`);
+            if (selectedLab) {
+                selectedLab.style.display = 'block';
+            }
+        }
+
+        function addPC(labNumber) {
+            const computerContainer = document.getElementById(`computerContainer${labNumber}`);
+            const pcCount = computerContainer.childElementCount + 1; 
+
+            const newPC = document.createElement('div');
+            newPC.classList.add('dropdown-container');
+            newPC.innerHTML = `
+                <div class='container'>
+                    <div class='frame-5'>
+                        <img class='vector' src='img/pc.png' />
+                        <div class='text-wrapper-6'>PC ${pcCount}</div> <!-- Autoincrement PC name -->
+                        <select class='dropdown-box' id='dropdown${labNumber}_${pcCount}'> <!-- Unique dropdown ID -->
+                            <option value='' disabled selected>Status</option>
+                            <option value='option1'>WORKING</option>
+                            <option value='option2'>UNDER MAINTENANCE</option>
+                            <option value='option3'>NOT FUNCTIONAL</option>
+                        </select>
+                        <label class='status-label'></label>
+                    </div>
+                </div>
+            `;
+
+            computerContainer.appendChild(newPC);
+        }
+    </script>
 </head>
 <body>
     <div class="desktop">
@@ -23,15 +100,8 @@
                     <div class="menu-container-1">
                         <a href=""><li><img src="img/labs.png" alt="Laboratories"><div class="text-wrapper-5">Laboratories</div></li></a>
                         <ul class="dropdown">
-                            <div class="drop-container">
-                                <a href="lab1.php"><li>Lab 1</li></a>
-                            </div>
-                            <div class="drop-container">
-                                <a href=""><li>Lab 2</li></a>
-                            </div>
-                            <div class="drop-container">
-                                <a href=""><li>Lab 3</li></a>
-                            </div>
+                            <li><button onclick="addLab()">Add a Lab</button></li>
+                            <!-- Labs will be added here -->
                         </ul>
                     </div>
                 </ul>
@@ -39,41 +109,6 @@
             <div class="frame">
                 <div class="LOG-OUT-wrapper"><div class="LOG-OUT">LOG OUT</div></div>
             </div>
-        </div>
-        <div class="lab1" style="background-color: transparent;">
-            <h1>LAB 1</h1>
-            <form method="post">
-                <button type="submit" name="addComputer">Add PC</button>
-                <div id="computerContainer" class="computer-container">
-                    <?php
-                    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['addComputer'])) {
-                        $computerCount = $_POST['computerCount'] ?? 0;
-                        $computerCount++;
-
-                        for ($i = 1; $i <= $computerCount; $i++) {
-                            echo "
-                            <div class='dropdown-container'>
-                                <div class='container'>
-                                    <div class='frame-5'>
-                                        <img class='vector' src='img/pc.png' />
-                                        <div class='text-wrapper-6'>PC $i</div>
-                                        <select class='dropdown-box'>
-                                            <option value='' disabled selected>Status</option>
-                                            <option value='option1'>WORKING</option>
-                                            <option value='option2'>UNDER MAINTENANCE</option>
-                                            <option value='option3'>NOT FUNCTIONAL</option>
-                                        </select>
-                                        <label class='status-label'></label>
-                                    </div>
-                                </div>
-                            </div>
-                            ";
-                        }
-                        echo "<input type='hidden' name='computerCount' value='$computerCount'>";
-                    }
-                    ?>
-                </div>
-            </form>
         </div>
     </div>
 </body>
