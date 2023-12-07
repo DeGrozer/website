@@ -45,13 +45,6 @@ body {
 
 
 
-.computer-container {
-//
-}
-
-.dropdown-container {
-//
-}
 .menu ul .dropdown {
   display: none;
   position: absolute;
@@ -68,12 +61,10 @@ body {
   display: block;
 }
 .menu ul .dropdown li {
-  /* Adjust the width of the dropdown items */
-  width: 100%; /* Update or remove width as needed */
+  width: 100%; 
   margin-bottom: 5px; /* Optional: Adjust spacing between items */
 }
 
-/* Adjust the hover background color for dropdown items */
 .menu ul .dropdown li:hover {
   background-color: #5175bc;
 }
@@ -354,7 +345,6 @@ line-height: normal;
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  left: 352px;
   background-color: #4a5a78;
   display: flex;
   position: absolute;
@@ -540,4 +530,31 @@ a {
   color: #5175bc;
   left: 20px;
   bottom: 20px;
+}
+
+
+/*qwerty*/
+.computer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dropdown-container {
+width: calc(33.33% - 10px); 
+display: inline-block; 
+vertical-align: top;
+box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc; 
+  padding: 10px;
+}
+
+.dropdown-box {
+  width: 100%; 
 }
